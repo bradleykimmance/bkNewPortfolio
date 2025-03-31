@@ -1,10 +1,10 @@
 import reactLogo from './assets/react.svg';
 import { useState } from 'react';
 import './App.css';
+import Home from './components/Home.tsx';
+import Layout from './components/Layout.tsx';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div>
@@ -47,6 +47,9 @@ const App = () => {
         Click on the Vite and React logos to learn more
       </p>
     </>
+      <Layout>
+        <Home />
+      </Layout>
   );
 };
 
