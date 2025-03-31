@@ -1,0 +1,9 @@
+.navigation-links {
+    @apply flex;
+    @apply divide-x-2 divide-solid divide-black dark:divide-white;
+    button {
+        @apply p-2 ml-1 md:ml-4 mr-1 md:mr-4 rounded-md sm:ml-2 sm:mr-2 lg:ml-5 lg:mr-5;
+        @apply bg-gray-200 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-500 loaded:transition-colors loaded:duration-1000 text-black dark:text-white;
+        @apply divide-black divide-solid;
+    }
+}
