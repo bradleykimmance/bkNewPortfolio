@@ -1,52 +1,16 @@
-import reactLogo from './assets/react.svg';
-import { useState } from 'react';
-import './App.css';
+import Header from './components/Header/Header.tsx';
+import Home from './components/Home.tsx';
+import Layout from './components/Layout.tsx';
+import { ThemeProvider } from './contexts/ThemeContext/ThemeProvider.tsx';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a
-          href="https://vite.dev"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Vite logo"
-            className="logo"
-            src="./vite.svg"
-          />
-        </a>
-        <a
-          href="https://react.dev"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="React logo"
-            className="logo react"
-            src={reactLogo}
-          />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          onClick={() => setCount((counter) => counter + 1)}
-          type="button"
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ThemeProvider>
+      <Header />
+      <Layout>
+        <Home />
+      </Layout>
+    </ThemeProvider>
   );
 };
 

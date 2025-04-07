@@ -1,0 +1,11 @@
+@reference "../../globals.css";
+
+.navigation-links {
+    @apply flex;
+    @apply divide-x-2 divide-solid divide-black dark:divide-white;
+    button {
+        @apply p-1 sm:p-2 ml-1 md:ml-4 mr-1 md:mr-4 rounded-md sm:ml-2 sm:mr-2 lg:ml-5 lg:mr-5;
+        @apply bg-gray-200 hover:bg-gray-400 active:bg-gray-500 dark:bg-gray-700 dark:hover:bg-gray-500 dark:active:bg-gray-400 text-black dark:text-white;
+        @apply loaded:transition-colors loaded:duration-1000 loaded:active:duration-75 loaded:hover:duration-75;
+    }
+}
