@@ -1,6 +1,6 @@
 import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext.ts';
-import React, { useContext } from 'react';
 import './Header.css';
+import React, { useContext } from 'react';
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -9,7 +9,9 @@ const Header: React.FC = () => {
     <header className="sticky top-0 w-full h-[75px] flex justify-between items-center px-5">
       <div className="flex justify-between w-full max-w-[1000px] mx-auto items-center">
         <a href="/">
-          <h1 className="cursor-pointer m-0 text-3xl font-bold">BK</h1>
+          <h1 className="cursor-pointer m-0 text-3xl font-bold active:scale-115 transition-transform duration-75">
+            BK
+          </h1>
         </a>
         <div className="navigation-links">
           <a href="/about">
